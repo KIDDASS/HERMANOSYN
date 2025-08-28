@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: url("https://github.com/KIDDASS/HERMANOSYN/raw/main/B%20Lovee%20Drill%20GIF%20-%20B%20lovee%20Drill%20Nyc%20drill%20-%20Discover%20%26%20Share%20GIFs.gif") no-repeat center center fixed;
+    background: url("https://github.com/KIDDASS/HERMANOSYN/blob/main/B%20Lovee%20Drill%20GIF%20-%20B%20lovee%20Drill%20Nyc%20drill%20-%20Discover%20&%20Share%20GIFs.gif?raw=true") no-repeat center center fixed;
     background-size: cover;
     min-height: 100vh;
     color: white;
@@ -778,5 +778,6 @@ html {
   0%   { opacity: 1; transform: translateY(0) scale(1); }
   100% { opacity: 0; transform: translateY(-80px) scale(0.3); }
 }
+
 
 
