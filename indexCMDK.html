@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hermano Syndicate</title>
+    <link rel="stylesheet" href="stylesCMDK.css">
+</head>
+<body>
+    <!-- Background Audio -->
+    <audio id="backgroundAudio" loop preload="auto">
+        <source src="https://github.com/KIDDASS/HERMANOSYN/raw/main/Faded%20(Raw)%20-%20Illest%20Morena%20(Official%20Lyric%20Video).mp3" type="audio/mpeg">
+        This browser does not support HTML5 audio
+      
+
+
+    </audio>
+  <!-- Custom Cursor -->
+      <!-- Custom Cursor -->
+<div id="customCursor" class="custom-cursor"></div>
+ 
+
+    <!-- Intro Screen -->
+    <div class="intro-screen" id="introScreen">
+        <!-- Animated Particles -->
+        <div class="particles" id="particles"></div>
+        
+        <!-- Main Logo -->
+        <div class="logo-container">
+            <h1 class="main-logo">CUARZO</h1>
+            <div class="subtitle">MAFIOSO DE KALIDAD</div>
+        </div>
+
+        <!-- Enter Prompt -->
+        <div class="enter-prompt">
+            <p>Press anywhere to enter</p>
+        </div>
+
+        <!-- Glitch Effect Overlay -->
+        <div class="glitch-overlay"></div>
+    </div>
+
+    <!-- Main Website Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Audio Controls -->
+        <div class="audio-controls" id="audioControls">
+            <button id="audioToggle" class="audio-toggle">Music ON</button>
+        </div>
+
+        <!-- Discord Icon -->
+        <div class="discord-icon" id="discordIcon">
+            <a href="https://discord.gg/aqaVUkADAT" target="_blank" rel="noopener noreferrer" class="discord-link">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36" class="discord-svg">
+                    <path fill="currentColor" d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/>
+                </svg>
+            </a>
+        </div>
+
+        <!-- Header -->
+        <header class="header">
+            <!-- Empty header for now, Discord icon is positioned absolutely -->
+        </header>
+
+
+        
+
+<!-- CMDK Button -->
+<div class="hn-button-container">
+<a href="index.html" class="hn-image-button">
+  <img src="https://github.com/KIDDASS/HERMANOSYN/blob/main/HN-modified.png?raw=true" alt="CMDK" />
+</a>
+</div>
+
+
+
+
+
+        <!-- Main Container -->
+        <div class="container">
+            <!-- Members Section -->
+            <div id="members-section">
+                <h1 class="title">Cuarzo Mafioso De Kalidad</h1>
+                
+                <!-- Profile Grid -->
+                <div class="profile-grid">
+                      <!-- Member 1 -->
+                    <div class="profile-panel">
+                        <div class="profile-image">
+                            <img src="https://github.com/KIDDASS/HERMANOSYN/blob/main/TOKYO.png?raw=true" alt="Tokyo">
+                        </div>
+                        <h3 class="member-name">Tokyo</h3>
+                        <p class="member-role">CMDK</p>
+                        <div class="social-links">
+                            <a href="" class="social-link">ROBLOX</a>
+                        </div>
+                    </div>
+
+                    <!-- Member 2 -->
+                    <div class="profile-panel">
+                        <div class="profile-image">
+                            <img src="https://github.com/KIDDASS/HERMANOSYN/blob/main/TERESE.jpg?raw=true" alt="Trese">
+                        </div>
+                        <h3 class="member-name">Trese</h3>
+                        <p class="member-role">CMDK</p>
+                        <div class="social-links">
+                            <a href="" class="social-link">ROBLOX</a>
+                        </div>
+                    </div>
+
+                     <!-- Member 69 -->
+                    <div class="profile-panel">
+                        <div class="profile-image">
+                            <img src="https://github.com/KIDDASS/HERMANOSYN/blob/main/trina.jpg?raw=true" alt="Trina">
+                        </div>
+                        <h3 class="member-name">Trina</h3>
+                        <p class="member-role">CMDK</p>
+                        <div class="social-links">
+                            <a href="" class="social-link">ROBLOX</a>
+                        </div>
+                    </div>
+
+
+                   
+
+                          
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                 <p>©Hermano & CMDK. All rights reserved.</p>
+        </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for Intro, Audio Control, and Custom Cursor
+        document.addEventListener('DOMContentLoaded', function() {
+            const introScreen = document.getElementById('introScreen');
+            const mainContent = document.getElementById('mainContent');
+            const audioControls = document.getElementById('audioControls');
+            const discordIcon = document.getElementById('discordIcon');
+            const audio = document.getElementById('backgroundAudio');
+            const audioToggle = document.getElementById('audioToggle');
+       
+            
+            let hasEntered = false;
+            
+    
+            // =================== INTRO FUNCTIONALITY ===================
+            
+            // Create animated particles
+            function createParticles() {
+                const particles = document.getElementById('particles');
+                const particleCount = 50;
+                
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.top = Math.random() * 100 + '%';
+                    particle.style.width = Math.random() * 4 + 2 + 'px';
+                    particle.style.height = particle.style.width;
+                    particle.style.animationDelay = Math.random() * 6 + 's';
+                    particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                    particles.appendChild(particle);
+                }
+            }
+            
+            // Enter website function
+            function enterWebsite() {
+                if (hasEntered) return;
+                hasEntered = true;
+                
+                // Start music
+                audio.volume = 0.3;
+                audio.play().then(() => {
+                    console.log('Audio started playing');
+                    audioToggle.textContent = ' Music ON';
+                }).catch(e => {
+                    console.log('Audio play failed:', e);
+                    audioToggle.textContent = ' Click to Play Music';
+                });
+                
+                // Fade out intro
+                introScreen.classList.add('fade-out');
+                
+                // Show main content after transition
+                setTimeout(() => {
+                    introScreen.style.display = 'none';
+                    mainContent.classList.add('show');
+                    audioControls.classList.add('show');
+                    discordIcon.classList.add('show');
+                    document.body.style.overflow = 'auto';
+                    
+                    // Update interactive elements for cursor after content loads
+                    updateInteractiveElements();
+                }, 1000);
+            }
+            
+            // Update interactive elements for cursor
+            function updateInteractiveElements() {
+                const newInteractiveElements = document.querySelectorAll('a, button, .profile-panel, .social-link');
+                
+                newInteractiveElements.forEach(element => {
+                    element.addEventListener('mouseenter', function() {
+                        customCursor.classList.add('hover');
+                        customCursor.classList.add('crosshair');
+                    });
+                    
+                    element.addEventListener('mouseleave', function() {
+                        customCursor.classList.remove('hover');
+                        customCursor.classList.remove('crosshair');
+                    });
+                });
+            }
+            
+            // Audio toggle functionality
+            audioToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                if (audio.paused) {
+                    audio.play().then(() => {
+                        audioToggle.textContent = ' Music ON';
+                    }).catch(e => {
+                        console.log('Play failed:', e);
+                        audioToggle.textContent = 'Audio Error';
+                    });
+                } else {
+                    audio.pause();
+                    audioToggle.textContent = ' Music OFF';
+                }
+            });
+            
+            // Enter on any click/key/touch
+            introScreen.addEventListener('click', enterWebsite);
+            document.addEventListener('keydown', function(e) {
+                if (!hasEntered) {
+                    enterWebsite();
+                }
+            });
+            
+            // Touch support for mobile
+            introScreen.addEventListener('touchstart', function(e) {
+                e.preventDefault();
+                enterWebsite();
+            });
+            
+            // Initialize particles
+            createParticles();
+            
+            // Glitch effect
+            setInterval(() => {
+                if (!hasEntered) {
+                    document.querySelector('.glitch-overlay').style.opacity = Math.random() * 0.1;
+                }
+            }, 100);
+            
+            // Initialize cursor position
+            customCursor.style.left = '50%';
+            customCursor.style.top = '50%';
+        });
+        // Custom Cursor
+const customCursor = document.getElementById('customCursor');
+
+document.addEventListener('mousemove', (e) => {
+  customCursor.style.left = e.clientX + 'px';
+  customCursor.style.top = e.clientY + 'px';
+});
+
+// Add hover effect for interactive elements
+function updateInteractiveElements() {
+  const interactiveElements = document.querySelectorAll('a, button, .profile-panel, .social-link');
+  
+  interactiveElements.forEach(el => {
+    el.addEventListener('mouseenter', () => customCursor.classList.add('hover'));
+    el.addEventListener('mouseleave', () => customCursor.classList.remove('hover'));
+  });
+}
+
+// Run once on page load
+
+
+
+
+
+
+// Run once on page load
+updateInteractiveElements();
+
+
+</script>
+
+</body>
+</html>
