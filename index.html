@@ -9,9 +9,12 @@
 <body>
     <!-- Background Audio -->
     <audio id="backgroundAudio" loop preload="auto">
-        <source src="http://github.com/macoy699696969669/HERMANOSYN/raw/main/99%20SWAG%20(OMV).mp3" type="audio/mpeg">
+        <source src="99 SWAG (OMV).mp3" type="audio/mpeg">
         This browser does not support HTML5 audio
     </audio>
+
+    <!-- Custom Target Cursor -->
+    <div class="custom-cursor" id="customCursor"></div>
 
     <!-- Intro Screen -->
     <div class="intro-screen" id="introScreen">
@@ -21,7 +24,7 @@
         <!-- Main Logo -->
         <div class="logo-container">
             <h1 class="main-logo">HERMANO</h1>
-            <div class="subtitle">9K</div>
+            <div class="subtitle">SYNDICATE</div>
         </div>
 
         <!-- Enter Prompt -->
@@ -37,7 +40,7 @@
     <div class="main-content" id="mainContent">
         <!-- Audio Controls -->
         <div class="audio-controls" id="audioControls">
-            <button id="audioToggle" class="audio-toggle"> Music ON</button>
+            <button id="audioToggle" class="audio-toggle">🔊 Music ON</button>
         </div>
 
         <!-- Discord Icon -->
@@ -127,7 +130,7 @@
     </div>
 
     <script>
-        // JavaScript for Intro and Audio Control
+        // JavaScript for Intro, Audio Control, and Custom Cursor
         document.addEventListener('DOMContentLoaded', function() {
             const introScreen = document.getElementById('introScreen');
             const mainContent = document.getElementById('mainContent');
@@ -135,8 +138,53 @@
             const discordIcon = document.getElementById('discordIcon');
             const audio = document.getElementById('backgroundAudio');
             const audioToggle = document.getElementById('audioToggle');
+            const customCursor = document.getElementById('customCursor');
             
             let hasEntered = false;
+            
+            // =================== CUSTOM CURSOR FUNCTIONALITY ===================
+            
+            // Update cursor position
+            document.addEventListener('mousemove', function(e) {
+                customCursor.style.left = e.clientX + 'px';
+                customCursor.style.top = e.clientY + 'px';
+            });
+            
+            // Hide cursor when leaving window
+            document.addEventListener('mouseleave', function() {
+                customCursor.style.opacity = '0';
+            });
+            
+            // Show cursor when entering window
+            document.addEventListener('mouseenter', function() {
+                customCursor.style.opacity = '1';
+            });
+            
+            // Add hover effects for interactive elements
+            const interactiveElements = document.querySelectorAll('a, button, .profile-panel, .social-link');
+            
+            interactiveElements.forEach(element => {
+                element.addEventListener('mouseenter', function() {
+                    customCursor.classList.add('hover');
+                    customCursor.classList.add('crosshair');
+                });
+                
+                element.addEventListener('mouseleave', function() {
+                    customCursor.classList.remove('hover');
+                    customCursor.classList.remove('crosshair');
+                });
+            });
+            
+            // Add click effect
+            document.addEventListener('mousedown', function() {
+                customCursor.classList.add('click');
+            });
+            
+            document.addEventListener('mouseup', function() {
+                customCursor.classList.remove('click');
+            });
+            
+            // =================== INTRO FUNCTIONALITY ===================
             
             // Create animated particles
             function createParticles() {
@@ -165,10 +213,10 @@
                 audio.volume = 0.3;
                 audio.play().then(() => {
                     console.log('Audio started playing');
-                    audioToggle.textContent = ' Music ON';
+                    audioToggle.textContent = '🔊 Music ON';
                 }).catch(e => {
                     console.log('Audio play failed:', e);
-                    audioToggle.textContent = ' Click to Play Music';
+                    audioToggle.textContent = '🔇 Click to Play Music';
                 });
                 
                 // Fade out intro
@@ -181,7 +229,27 @@
                     audioControls.classList.add('show');
                     discordIcon.classList.add('show');
                     document.body.style.overflow = 'auto';
+                    
+                    // Update interactive elements for cursor after content loads
+                    updateInteractiveElements();
                 }, 1000);
+            }
+            
+            // Update interactive elements for cursor
+            function updateInteractiveElements() {
+                const newInteractiveElements = document.querySelectorAll('a, button, .profile-panel, .social-link');
+                
+                newInteractiveElements.forEach(element => {
+                    element.addEventListener('mouseenter', function() {
+                        customCursor.classList.add('hover');
+                        customCursor.classList.add('crosshair');
+                    });
+                    
+                    element.addEventListener('mouseleave', function() {
+                        customCursor.classList.remove('hover');
+                        customCursor.classList.remove('crosshair');
+                    });
+                });
             }
             
             // Audio toggle functionality
@@ -189,14 +257,14 @@
                 e.stopPropagation();
                 if (audio.paused) {
                     audio.play().then(() => {
-                        audioToggle.textContent = ' Music ON';
+                        audioToggle.textContent = '🔊 Music ON';
                     }).catch(e => {
                         console.log('Play failed:', e);
                         audioToggle.textContent = '❌ Audio Error';
                     });
                 } else {
                     audio.pause();
-                    audioToggle.textContent = 'Music OFF';
+                    audioToggle.textContent = '🔇 Music OFF';
                 }
             });
             
@@ -223,9 +291,11 @@
                     document.querySelector('.glitch-overlay').style.opacity = Math.random() * 0.1;
                 }
             }, 100);
+            
+            // Initialize cursor position
+            customCursor.style.left = '50%';
+            customCursor.style.top = '50%';
         });
     </script>
 </body>
 </html>
-
-
