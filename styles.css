@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: url("https://github.com/KIDDASS/HERMANOSYN/blob/main/B%20Lovee%20Drill%20GIF%20-%20B%20lovee%20Drill%20Nyc%20drill%20-%20Discover%20&%20Share%20GIFs.gif?raw=true") no-repeat center center fixed;
+    background: url("your-background.gif") no-repeat center center fixed;
     background-size: cover;
     min-height: 100vh;
     color: white;
@@ -733,4 +733,48 @@ html {
         background: white;
         color: black;
     }
+}
+
+
+
+/* =================== BOTTOM IMAGE WITH HOVER PARTICLES =================== */
+
+/* Stays at the bottom of page content (not fixed to viewport) */
+.bottom-image-container {
+  position: relative;       /* relative to the page flow */
+  margin-top: 100px;        /* space above it */
+  margin-bottom: 20px;      /* space from bottom edge */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image styling */
+.bottom-image {
+  width: 120px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.bottom-image:hover {
+  transform: scale(1.1);
+}
+
+/* Particle container above image */
+/* Particles */
+.hover-particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: white; /* solid white */
+  box-shadow: 0 0 10px rgba(255,255,255,0.9); /* glow */
+  opacity: 0;
+  animation: floatUp 2s ease-out forwards;
+}
+
+@keyframes floatUp {
+  0%   { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-80px) scale(0.3); }
 }
