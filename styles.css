@@ -741,27 +741,6 @@ html {
 
 
 
-
-
-.cmdk-image-button {
-  position: absolute;   /* absolute so it stays inside the intro */
-  top: 15px;
-  left: 70px;
-  display: inline-block;
-  z-index: 1001; /* above intro content */
-}
-
-.cmdk-image-button img {
-  width: 60px;   /* adjust size */
-  height: auto;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-}
-
-.cmdk-image-button img:hover {
-  transform: scale(1.1);
-}
-
-
 /* =================== END OF STYLES =================== */
+
 
