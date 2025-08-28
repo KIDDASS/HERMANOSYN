@@ -9,7 +9,7 @@
 <body>
     <!-- Background Audio -->
     <audio id="backgroundAudio" loop preload="auto">
-        <source src="99 SWAG (OMV).mp3" type="audio/mpeg">
+        <source src="https://github.com/KIDDASS/HERMANOSYN/raw/main/NIO%20-%20STILL%20SWAGGIN'%20(OFFICIAL%20LYRIC%20VIDEO).mp3" type="audio/mpeg">
         This browser does not support HTML5 audio
       
 
@@ -314,8 +314,52 @@ function updateInteractiveElements() {
 }
 
 // Run once on page load
-updateInteractiveElements();
+
+
+
+
+
+
+// ================= IMAGE PARTICLE EFFECT =================
+// Particle effect for bottom image
+const bottomImage = document.querySelector('.bottom-image');
+const hoverParticles = document.querySelector('.hover-particles');
+
+function createParticle() {
+  const particle = document.createElement('div');
+  particle.className = 'hover-particle';
+  particle.style.left = Math.random() * 200 + 'px';
+  particle.style.top = Math.random() * 150 + 'px';
+  hoverParticles.appendChild(particle);
+
+  setTimeout(() => particle.remove(), 2000);
+}
+
+let particleInterval;
+
+bottomImage.addEventListener('mouseenter', () => {
+  particleInterval = setInterval(createParticle, 150);
+});
+
+bottomImage.addEventListener('mouseleave', () => {
+  clearInterval(particleInterval);
+});
+
+
 
     </script>
+    
+
+updateInteractiveElements();
+<!-- Bottom Image (sticks at end of page) -->
+<div class="bottom-image-container">
+  <img src="https://github.com/KIDDASS/HERMANOSYN/blob/main/HN-modified.png?raw=true"
+       alt="Hermano Badge"
+       class="bottom-image">
+  <div class="hover-particles"></div>
+</div>
+
+
+
 </body>
 </html>
